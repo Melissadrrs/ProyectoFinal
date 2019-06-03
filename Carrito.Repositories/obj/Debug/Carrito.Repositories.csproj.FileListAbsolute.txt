@@ -1,0 +1,9 @@
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.Repositories\bin\Debug\Carrito.Repositories.dll
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.Repositories\bin\Debug\Carrito.Repositories.pdb
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.Repositories\bin\Debug\Carrito.Models.dll
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.Repositories\bin\Debug\Carrito.Models.pdb
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.Repositories\obj\Debug\Carrito.Repositories.csprojAssemblyReference.cache
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.Repositories\obj\Debug\Carrito.Repositories.csproj.CoreCompileInputs.cache
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.Repositories\obj\Debug\Carrito.Repositories.csproj.CopyComplete
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.Repositories\obj\Debug\Carrito.Repositories.dll
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.Repositories\obj\Debug\Carrito.Repositories.pdb

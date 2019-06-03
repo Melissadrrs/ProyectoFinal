@@ -1,0 +1,74 @@
+﻿@model Eventos.Mvc.ViewModels.EventosViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+@section Scripts
+{
+    @*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMe11nY6w37PiBr1owEu1fFlxE4CANMdw"></script>*@
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".itemVer").hide();
+            $(".itembak").css({
+                "background-color": "#d4defd"
+            });
+            $(".principal th").css({
+                'text-align': 'right'
+            });
+            $(".principal td:nth-child(2)").css({
+                'width': '500px'
+            });
+
+            $(".btnVerMas").click(function () {
+                //showPosition(".itemMap[data-id=" + $(this).attr("data-id") + "]");
+                $(".itemVer[data-id=" + $(this).attr("data-id") + "]").show();
+            });
+            $(".btnVerMenos").click(function () {
+                $(".itemVer[data-id=" + $(this).attr("data-id") + "]").hide();
+            });
+
+            //function ObtenerMap(address) {
+            //    var geocoder = new google.maps.Geocoder();
+            //    geocoder.geocode({ 'address': address }, function (results, status) {
+
+            //        if (status == google.maps.GeocoderStatus.OK) {
+            //            return { lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng() }
+            //        }
+            //    });
+            //}
+            //function showPosition(element) {
+            //    var address = $(element).find("td").text().trim();
+
+            //    var location = ObtenerMap(address);
+            //    var map = new google.maps.Map($(element).find("td").find(".googleMap"), {
+            //        zoom: 15,
+            //        center: location
+            //    });
+            //    var marker = new google.maps.Marker({
+            //        position: location,
+            //        map: map
+            //    });
+            //}
+
+        });
+    </script>
+
+}
+<h2>Administrador de Eventos!!!</h2>
+
+<p>Eventos Próximos</p>
+
+@foreach (var item in Model.EventProximos)
+{
+    @Html.Partial("_List", item)
+}
+@Html.Hidden("hdnROL", (string)ViewBag.Rol)
+<br />
+<br />
+<p>Eventos Pasados</p>
+
+@foreach (var item in Model.EventPasados)
+{
+    @Html.Partial("_List", item)
+}

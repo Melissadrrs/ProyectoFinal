@@ -1,0 +1,76 @@
+﻿@model Eventos.Mvc.ViewModels.EventoViewModel
+
+@{
+    ViewBag.Title = "Details";
+   
+}
+
+
+<div>
+    <h4>Evento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Título
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.evento.Titulo)
+        </dd>
+        <dt>
+            Autor
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.autor.Email)
+        </dd>
+        <dt>
+            Descripción
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.evento.Descripcion)
+        </dd>
+        <dt>
+            FechaInicio
+        </dt>
+        <dd>
+            @Model.evento.FechaInicio.ToString("dd/MM/yyyy")
+        </dd>
+        <dt>
+            HoraInicio
+        </dt>
+        <dd>
+            @Model.evento.HoraInicio.ToString("hh\\:mm")
+        </dd>
+        <dt>
+            Duracion
+        </dt>
+        <dd>
+            @Model.evento.Duracion.ToString("hh\\:mm")
+        </dd>
+        <dt>
+            Ubicación
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.evento.Ubicacion)
+        </dd>
+        <dt>
+            Tipo
+        </dt>
+        <dd>
+            @Model.evento.DescTipo()
+        </dd>
+        <dt>
+            Comentarios
+        </dt>
+        <dd>
+            @Html.ActionLink("Agregar", "Create", "Comentarios", new { Id = Model.evento.Id, Url = $"/Eventos/Details/{Model.evento.Id}" }, null)
+        </dd>
+    </dl>
+    @if (Model.comentarios.Count() > 0)
+    {
+        @Html.Partial("../Comentarios/_List", Model, new ViewDataDictionary { { "Url", $"/Eventos/Details/{Model.evento.Id}" }, { "UserRol", ViewBag.UserRol }, { "UserId", ViewBag.UserId }, { "band", true } });
+     
+    }
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

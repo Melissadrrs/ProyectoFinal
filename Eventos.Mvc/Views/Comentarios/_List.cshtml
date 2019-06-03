@@ -1,0 +1,38 @@
+﻿@model Eventos.Mvc.ViewModels.EventoViewModel
+
+<table class="table itemVer itembak" data-id="@Model.evento.Id">
+    <tr>
+        <th>
+            Contenido
+        </th>
+        <th>
+            Usuario
+        </th>
+        <th>
+            Fecha
+        </th>
+    </tr>
+    @foreach (var cmt in Model.comentarios)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => cmt.comentario.Contenido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => cmt.autor.Email)
+            </td>
+            <td>
+                @cmt.comentario.Fecha.ToString("dd/MM/yyyy")
+
+            </td>
+            <td>
+                @if (ViewBag.band || (ViewBag.UserRol == Utils.RolAdministrador || (ViewBag.UserRol == Utils.RolUsuario && (ViewBag.UserId == cmt.autor.Id))))
+                {
+                    @Html.ActionLink("Eliminar", "Delete", "Comentarios", new { Id = cmt.comentario.Id, Url = ViewBag.Url}, new { onclick = "return confirm('Está seguro de eliminar este comentario?');" })
+                }
+            </td>
+        </tr>
+
+
+    }
+</table>

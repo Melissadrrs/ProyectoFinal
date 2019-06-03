@@ -1,0 +1,12 @@
+C:\CIBERTEC\VS2017WebDeveloper\slnLabs2017WebDev\Eventos.Models\bin\Debug\Eventos.Models.dll
+C:\CIBERTEC\VS2017WebDeveloper\slnLabs2017WebDev\Eventos.Models\bin\Debug\Eventos.Models.pdb
+C:\CIBERTEC\VS2017WebDeveloper\slnLabs2017WebDev\Eventos.Models\obj\Debug\Eventos.Models.csprojAssemblyReference.cache
+C:\CIBERTEC\VS2017WebDeveloper\slnLabs2017WebDev\Eventos.Models\obj\Debug\Eventos.Models.csproj.CoreCompileInputs.cache
+C:\CIBERTEC\VS2017WebDeveloper\slnLabs2017WebDev\Eventos.Models\obj\Debug\Eventos.Models.dll
+C:\CIBERTEC\VS2017WebDeveloper\slnLabs2017WebDev\Eventos.Models\obj\Debug\Eventos.Models.pdb
+E:\CIBERTEC\Proyectos\VS2017WebDeveloper\slnLabs2017WebDev\Eventos.Models\bin\Debug\Eventos.Models.dll
+E:\CIBERTEC\Proyectos\VS2017WebDeveloper\slnLabs2017WebDev\Eventos.Models\bin\Debug\Eventos.Models.pdb
+E:\CIBERTEC\Proyectos\VS2017WebDeveloper\slnLabs2017WebDev\Eventos.Models\obj\Debug\Eventos.Models.csprojAssemblyReference.cache
+E:\CIBERTEC\Proyectos\VS2017WebDeveloper\slnLabs2017WebDev\Eventos.Models\obj\Debug\Eventos.Models.csproj.CoreCompileInputs.cache
+E:\CIBERTEC\Proyectos\VS2017WebDeveloper\slnLabs2017WebDev\Eventos.Models\obj\Debug\Eventos.Models.dll
+E:\CIBERTEC\Proyectos\VS2017WebDeveloper\slnLabs2017WebDev\Eventos.Models\obj\Debug\Eventos.Models.pdb

@@ -1,0 +1,5 @@
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.Models\bin\Debug\Carrito.Models.dll
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.Models\bin\Debug\Carrito.Models.pdb
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.Models\obj\Debug\Carrito.Models.csproj.CoreCompileInputs.cache
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.Models\obj\Debug\Carrito.Models.dll
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.Models\obj\Debug\Carrito.Models.pdb

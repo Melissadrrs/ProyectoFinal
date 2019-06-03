@@ -1,0 +1,2 @@
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.UnitOfWork\obj\Debug\Carrito.UnitOfWork.csprojAssemblyReference.cache
+E:\CIBERTEC\Proyectos\SlnProyFinalCarrito\Carrito.UnitOfWork\obj\Debug\Carrito.UnitOfWork.csproj.CoreCompileInputs.cache

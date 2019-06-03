@@ -1,0 +1,95 @@
+﻿@model Eventos.Mvc.ViewModels.EventoViewModel
+
+<table class="table principal">
+    <tr>
+        <th>
+            Título :
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => Model.evento.Titulo)
+        </td>
+        <td>
+            <a class="btnVerMas" href="#" return false; data-id="@Model.evento.Id">
+                <span class="glyphicon glyphicon-plus"></span> Ver más
+            </a>
+        </td>
+        <td>
+            <a class="btnVerMenos" href="#" return false; data-id="@Model.evento.Id">
+                <span class="glyphicon glyphicon-minus"></span> Ver menos
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Autor :
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => Model.autor.Email)
+        </td>
+    </tr>
+    <tr>
+        <th>
+            FechaInicio :
+        </th>
+        <td>
+            @Model.evento.FechaInicio.ToString("dd/MM/yyyy")
+        </td>
+    </tr>
+    <tr>
+        <th>
+            HoraInicio :
+        </th>
+        <td>
+            @Model.evento.HoraInicio.ToString("hh\\:mm")
+        </td>
+    </tr>
+    <tr>
+        <th>
+            Duracion :
+        </th>
+        <td>
+            @Model.evento.Duracion.ToString("hh\\:mm")
+        </td>
+    </tr>
+    <tr class="" data-id="@Model.evento.Id">
+        <th >
+            Ubicación :
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => Model.evento.Ubicacion)
+        </td>
+    </tr>
+    <tr class="itemVer itembak" data-id="@Model.evento.Id">
+        <th>
+            Descripcion :
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => Model.evento.Descripcion)
+        </td>
+    </tr>
+    @if (Model.comentarios.Count() > 0 || (Model.comentarios.Count()==0 && ViewBag.UserRol != Utils.RolInvitado)) {
+        <tr class="itemVer" data-id="@Model.evento.Id">
+            <th>
+                Comentarios :
+            </th>
+            @if (ViewBag.UserRol != Utils.RolInvitado)
+            {
+                <td>
+                    @Html.ActionLink("Agregar", "Create", "Comentarios", new { Id = Model.evento.Id, Url = "/Home/Index" }, null)
+                </td>
+            }
+        </tr>
+    }
+    @if (Model.comentarios.Count() > 0)
+    {
+
+        <tr>
+        
+            @Html.Partial("../Comentarios/_List", Model, new  ViewDataDictionary { { "Url", "/Home/Index"  } , { "UserRol", ViewBag.UserRol }, { "UserId", ViewBag.UserId }, { "band", false } });
+         
+
+        </tr>
+    }
+</table>
+<br/>
+<br />

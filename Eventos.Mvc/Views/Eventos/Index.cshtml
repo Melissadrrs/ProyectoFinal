@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Eventos.Mvc.ViewModels.EventoViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Mis Eventos</h2>
+
+<p>
+    @Html.ActionLink("Create", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Título
+        </th>
+        <th>
+            Autor
+        </th>
+        <th>
+            Descripción
+        </th>
+        <th>
+            FechaInicio
+        </th>
+        <th>
+            HoraInicio
+        </th>
+        <th>
+            Duracion
+        </th>
+        <th>
+            Ubicación
+        </th>
+        <th>
+            Tipo
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.evento.Titulo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.autor.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.evento.Descripcion)
+        </td>
+        <td>
+            @item.evento.FechaInicio.ToString("dd/MM/yyyy")
+        </td>
+        <td>
+            @item.evento.HoraInicio.ToString("hh\\:mm")
+        </td>
+        <td>
+            @item.evento.Duracion.ToString("hh\\:mm")
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.evento.Ubicacion)
+        </td>
+        <td>
+            @item.evento.DescTipo()
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { Id = item.evento.Id }) |
+            @Html.ActionLink("Detalle", "Details", new { Id = item.evento.Id }) |
+            @Html.ActionLink("Eliminar", "Delete", new { Id = item.evento.Id }, new { onclick = "return confirm('Está seguro de eliminar este evento?');" })
+        </td>
+    </tr>
+    }
+
+</table>
